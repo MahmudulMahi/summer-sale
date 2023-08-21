@@ -1,6 +1,7 @@
 let count = 1;
 let total = 0
 const applyBtn = document.getElementById("applyBtn");
+const PurchaseBtn = document.getElementById("PurchaseBtn");
 function calculateProduct(target) {
   const productList = document.getElementById("product-list");
   const product = target.childNodes[3].childNodes[3].innerText;
@@ -34,4 +35,15 @@ function calculateProduct(target) {
     }
   })
 
+  if (total >= 1) {
+    PurchaseBtn.removeAttribute('disabled');
+  }
+ 
+    const reloadButton = document.getElementById("reloadButton");
+
+  
+    reloadButton.addEventListener("click", function() {
+     
+      location.reload();
+    });
 }
