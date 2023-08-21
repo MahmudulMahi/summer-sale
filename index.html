@@ -54,7 +54,7 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
                 <h2 class="card-title">K. Accessories</h2>
-                <p><span>39.00 </span> TK</p>
+                <p>39.00 TK</p>
 
               </div>
 
@@ -89,7 +89,7 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
                 <h2 class="card-title">Home Cooker </h2>
-                <p> <span>49.00</span> TK</p>
+                <p> 49.00 TK</p>
 
               </div>
             </div>
@@ -98,7 +98,7 @@
         <div>
           <h1 class="text-3xl">Sportswear</h1>
           <div class="flex gap-6">
-            <div class="card bg-base-100 w-96 shadow-xl">
+            <div onclick="calculateProduct(this)" class="card bg-base-100 w-96 shadow-xl">
               <figure class="px-10 pt-10">
                 <img src="/images/prod4.png" alt="Shoes" class="rounded-xl" />
               </figure>
@@ -112,12 +112,10 @@
                 </div>
                 <h2 class="card-title">Sports Back Cap</h2>
                 <p>49.00 TK</p>
-                <div class="card-actions">
-                  <button class="btn btn-primary">Buy Now</button>
-                </div>
+               
               </div>
             </div>
-            <div class="card bg-base-100 w-96 shadow-xl">
+            <div onclick="calculateProduct(this)" class="card bg-base-100 w-96 shadow-xl">
               <figure class="px-10 pt-10">
                 <img src="/images/prod5.png" alt="Shoes" class="rounded-xl" />
               </figure>
@@ -131,12 +129,10 @@
                 </div>
                 <h2 class="card-title">Full Jersey Set</h2>
                 <p>69.00 TK</p>
-                <div class="card-actions">
-                  <button class="btn btn-primary">Buy Now</button>
-                </div>
+               
               </div>
             </div>
-            <div class="card bg-base-100 w-96 shadow-xl">
+            <div onclick="calculateProduct(this)" class="card bg-base-100 w-96 shadow-xl">
               <figure class="px-10 pt-10">
                 <img src="/images/prod6.png" alt="Shoes" class="rounded-xl" />
               </figure>
@@ -150,9 +146,7 @@
                 </div>
                 <h2 class="card-title">Sports cates</h2>
                 <p>159.00 TK</p>
-                <div class="card-actions">
-                  <button class="btn btn-primary">Buy Now</button>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -160,30 +154,33 @@
       </div>
 
       <div>
-        <div>
-          <ul id="product-list">
 
-          </ul>
-        </div>
+        
         <div class="flex flex-col">
           <div class="flex">
 
             <div>
-              <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+              <input id="coupon" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
             </div>
             <div>
-              <button class="btn btn-secondary">Secondary</button>
+              <button id="applyBtn" class="btn btn-secondary" disabled>Apply</button>
             </div>
+          </div>
+          <p class="text-red-500" id="discount-error"></p>
+          <div>
+            <ul id="product-list">
+              <!-- product list added -->
+            </ul>
           </div>
           <div class="w-[400px]">
             <div class="text-2xl">
-              Total price: <span>00</span>
+              Total price: <span id="total-frist">00</span>
             </div>
             <div class="text-2xl">
-              Discount:<span>00</span>
+              Discount:<span id="discount">00</span>
             </div>
             <div class="text-2xl">
-              Total:<span>00</span>
+              Total:<span id="discount-price">00</span>
             </div>
 
           </div>
